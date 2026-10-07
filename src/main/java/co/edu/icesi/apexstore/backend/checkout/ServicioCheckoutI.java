@@ -57,7 +57,7 @@ public final class ServicioCheckoutI {
         } catch (ServicioNoDisponible e) {
             orden.estado = EstadoOrden.OrdenFallida;
             orden.mensaje = e.razon;
-            throw e;
+            return resultado(orden);
         }
         return resultado(orden);
     }

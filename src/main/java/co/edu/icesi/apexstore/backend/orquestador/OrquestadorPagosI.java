@@ -86,6 +86,8 @@ public final class OrquestadorPagosI implements IniciarPagoOrden {
             } finally {
                 entrada.bulkhead().release();
             }
+        } catch (ServicioNoDisponible e) {
+            throw e;
         } catch (PagoException e) {
             throw new ServicioNoDisponible("Persistencia no disponible", "transacciones");
         } finally {
