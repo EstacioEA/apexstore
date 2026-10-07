@@ -8,3 +8,5 @@
 - El primer `clean build` falló porque el toolchain pedía exactamente JDK 17 y Gradle no lo encontró, aunque sí está instalado JDK 21. Se corrigió el toolchain a Java 21, manteniendo el requisito mínimo Java 17+.
 - El segundo `clean build` falló porque `slice2java` rechaza operaciones que solo difieren en mayúsculas del nombre de la interfaz (`eco`/`Eco`). Se renombró la operación del Slice de humo a `repetir`.
 - T-02 falló inicialmente con el contrato normativo: `slice2java` rechazó tres operaciones por colisión de capitalización con sus interfaces y una operación por colisión con un diccionario. `--compat` produjo los mismos errores. Se aplicó el ajuste mínimo de nombres y se registró como D-02.
+- El primer test de T-03 no pudo descubrir pruebas porque JUnit Jupiter 5.12.2 quedó desalineado con el launcher de Gradle (`OutputDirectoryProvider`). Se ajustó a JUnit 5.10.2, la versión indicada en el plan técnico.
+- La segunda ejecución conservó JUnit Platform 1.12.2 porque ArchUnit 1.4.1 imponía el BOM 5.12.2. Se ajustó ArchUnit a 1.3.0, también según el plan técnico, para alinear todo el stack JUnit.
