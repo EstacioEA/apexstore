@@ -19,6 +19,14 @@
 | T-14 Sweeper | Completada | 3a09b0c | 2026-10-06 |
 | T-15 Admin y servidor | Completada | 58adba9 | 2026-10-06 |
 | T-16 Arranque unificado | Completada | edd2aba | 2026-10-06 |
-| T-17 Cliente y escenarios | Parcial | pendiente | 2026-10-06 |
+| T-17 Cliente y escenarios | Parcial | ea40f84 | 2026-10-06 |
 | T-20 Etiqueta previa | Completada | v0-sin-billetera | 2026-10-06 |
 | T-21 BilleteraSimulada | Completada | abce10d | 2026-10-06 |
+| T-18 Pruebas de integración E1–E9/E11 | Parcial | pendiente | 2026-10-06 |
+| T-19 Test arquitectónico E10 | Completada | pendiente | 2026-10-06 |
+| T-22 README | Completada | pendiente | 2026-10-06 |
+| T-23 Evidencia | Parcial | pendiente | 2026-10-06 |
+| T-24 Trazabilidad | Completada | pendiente | 2026-10-06 |
+| T-25 Fragmentos para informe | Completada | pendiente | 2026-10-06 |
+| T-26 Limitaciones y bitácora | Completada | pendiente | 2026-10-06 |
+| T-27 Verificación final desde cero | Parcial | pendiente | 2026-10-06 |
