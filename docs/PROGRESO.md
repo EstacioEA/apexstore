@@ -28,5 +28,5 @@
 | T-23 Evidencia | Parcial | eda5888 | 2026-10-06 |
 | T-24 Trazabilidad | Completada | 21b74bc | 2026-10-06 |
 | T-25 Fragmentos para informe | Completada | 69a6012 | 2026-10-06 |
-| T-26 Limitaciones y bitácora | Completada | pendiente | 2026-10-06 |
+| T-26 Limitaciones y bitácora | Completada | 72cd4e6 | 2026-10-06 |
 | T-27 Verificación final desde cero | Parcial | pendiente | 2026-10-06 |
