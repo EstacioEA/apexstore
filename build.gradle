@@ -1,0 +1,62 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.zeroc.gradle.ice-builder.slice' version '1.5.0'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "com.zeroc:ice:${iceVersion}"
+    implementation "com.h2database:h2:${h2Version}"
+    implementation 'org.slf4j:slf4j-api:2.0.17'
+    runtimeOnly 'org.slf4j:slf4j-simple:2.0.17'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.12.2'
+    testImplementation 'com.tngtech.archunit:archunit-junit5:1.4.1'
+}
+
+slice {
+    java {
+        files = fileTree(dir: 'src/main/slice', includes: ['*.ice'])
+    }
+}
+
+application {
+    mainClass = 'co.edu.icesi.apexstore.arranque.RunAll'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events 'passed', 'failed', 'skipped'
+        showStandardStreams = true
+    }
+}
+
+def runNode = { String taskName, String mainClassName, String configFile ->
+    tasks.register(taskName, JavaExec) {
+        group = 'application'
+        description = "Ejecuta ${mainClassName}"
+        classpath = sourceSets.main.runtimeClasspath
+        mainClass = mainClassName
+        args = ["--config=${configFile}"]
+    }
+}
+
+runNode('runDb', 'co.edu.icesi.apexstore.db.DbServer', 'config/db.properties')
+runNode('runPasarelas', 'co.edu.icesi.apexstore.pasarelas.PasarelasServer', 'config/pasarelas.properties')
+runNode('runBackend', 'co.edu.icesi.apexstore.backend.BackendServer', 'config/backend.properties')
+runNode('runTodo', 'co.edu.icesi.apexstore.arranque.RunAll', 'config/test.properties')
+runNode('runCliente', 'co.edu.icesi.apexstore.cliente.ClienteApp', 'config/cliente.properties')

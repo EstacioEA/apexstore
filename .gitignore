@@ -1,0 +1,9 @@
+build/
+.gradle/
+data/
+.idea/
+.vscode/
+*.iml
+out/
+.gradle-dist/
+gradle-*-bin.zip
