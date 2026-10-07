@@ -34,21 +34,28 @@ public final class ClienteApp {
                 }
                 ReporteConsola.imprimir(escenario, "ordenId=" + a.ordenId);
             } else {
-                ResultadoCompra stripe = new CanalWeb(checkout).comprar(
-                        solicitud("cliente-web", "web-" + System.nanoTime(), "STRIPE"));
-                ResultadoCompra cripto = new CanalMovil(checkout).comprar(
+                String medio = "extension".equalsIgnoreCase(escenario) ? "BILLETERA" : "STRIPE";
+                ResultadoCompra primera = new CanalWeb(checkout).comprar(
+                        solicitud("cliente-web", "web-" + System.nanoTime(), medio));
+                ResultadoCompra segunda = new CanalMovil(checkout).comprar(
                         solicitud("cliente-movil", "movil-" + System.nanoTime(), "CRIPTO"));
                 ReporteConsola.imprimir(escenario,
-                        "stripe=" + stripe.estado + " cripto=" + cripto.estado);
+                        medio.toLowerCase() + "=" + primera.estado + " cripto=" + segunda.estado);
             }
         }
     }
 
     private static SolicitudCompra solicitud(String cliente, String clave, String medio) {
-        String moneda = "STRIPE".equals(medio) ? "USD" : "BTC";
-        Map<String, String> datos = "STRIPE".equals(medio)
-                ? Map.of("tokenTarjeta", "tok_demo", "cvcSeguridad", "123")
-                : Map.of("direccionWallet", "wallet_demo", "redBlockchain", "testnet");
+        String moneda = switch (medio) {
+            case "STRIPE" -> "USD";
+            case "BILLETERA" -> "COP";
+            default -> "BTC";
+        };
+        Map<String, String> datos = switch (medio) {
+            case "STRIPE" -> Map.of("tokenTarjeta", "tok_demo", "cvcSeguridad", "123");
+            case "BILLETERA" -> Map.of("idBilletera", "wallet_demo", "pin", "1234");
+            default -> Map.of("direccionWallet", "wallet_demo", "redBlockchain", "testnet");
+        };
         return new SolicitudCompra(cliente, clave, moneda, medio,
                 new LineaCompra[]{new LineaCompra("SKU-DEMO", 1, 100)}, datos);
     }
