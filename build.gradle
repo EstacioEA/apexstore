@@ -59,4 +59,10 @@ runNode('runDb', 'co.edu.icesi.apexstore.db.DbServer', 'config/db.properties')
 runNode('runPasarelas', 'co.edu.icesi.apexstore.pasarelas.PasarelasServer', 'config/pasarelas.properties')
 runNode('runBackend', 'co.edu.icesi.apexstore.backend.BackendServer', 'config/backend.properties')
 runNode('runTodo', 'co.edu.icesi.apexstore.arranque.RunAll', 'config/test.properties')
-runNode('runCliente', 'co.edu.icesi.apexstore.cliente.ClienteApp', 'config/cliente.properties')
+tasks.register('runCliente', JavaExec) {
+    group = 'application'
+    description = 'Ejecuta un escenario del cliente'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'co.edu.icesi.apexstore.cliente.ClienteApp'
+    args = [project.findProperty('scenario') ?: 'smoke', '--config=config/cliente.properties']
+}

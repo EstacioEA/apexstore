@@ -13,3 +13,4 @@
 - La primera compilación de T-04 asumió erróneamente que Slice generaba clases para `sequence` y `dictionary`. El mapeo Java 3.7 genera arrays y `Map`; se corrigieron las firmas JDBC.
 - T-06 inicialmente intentó que una misma clase implementara `EstrategiaPagos` y `AdminPasarela`; Java/ICE generó dos despachadores `_iceDispatch` incompatibles. Se separó el servant administrativo en `AdminPasarelaI` sin duplicar estado.
 - T-08 requirió adaptar el acceso a propiedades: `com.zeroc.Ice.Properties` solo expone getters de un argumento. Se añadió un helper de valores por defecto y se corrigieron conversiones de rangos `long` a `int`.
+- El primer test concurrente de checkout reveló una ventana de carrera: el índice de idempotencia se publicaba antes que la orden. Se invirtió el orden de publicación (`porId` antes de `porClave`) y se eliminó la orden perdedora.
