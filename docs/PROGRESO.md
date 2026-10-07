@@ -24,7 +24,7 @@
 | T-21 BilleteraSimulada | Completada | abce10d | 2026-10-06 |
 | T-18 Pruebas de integración E1–E9/E11 | Parcial | pendiente | 2026-10-06 |
 | T-19 Test arquitectónico E10 | Completada | 985ecea | 2026-10-06 |
-| T-22 README | Completada | pendiente | 2026-10-06 |
+| T-22 README | Completada | f52f79c | 2026-10-06 |
 | T-23 Evidencia | Parcial | pendiente | 2026-10-06 |
 | T-24 Trazabilidad | Completada | pendiente | 2026-10-06 |
 | T-25 Fragmentos para informe | Completada | pendiente | 2026-10-06 |
