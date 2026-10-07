@@ -17,4 +17,4 @@
 | T-12 Orquestador | Completada | a2ace37 | 2026-10-06 |
 | T-13 Receptor | Completada | a8e1175 | 2026-10-06 |
 | T-14 Sweeper | Completada | 3a09b0c | 2026-10-06 |
-| T-15 Admin y servidor | Completada | pendiente | 2026-10-06 |
+| T-15 Admin y servidor | Completada | 58adba9 | 2026-10-06 |
