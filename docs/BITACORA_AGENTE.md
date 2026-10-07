@@ -7,3 +7,4 @@
 - `gradle -v` y `mvn -v` no están disponibles y no existe wrapper en el repositorio inicial. La preparación del build queda pendiente de resolver con una instalación local o distribución descargada.
 - El primer `clean build` falló porque el toolchain pedía exactamente JDK 17 y Gradle no lo encontró, aunque sí está instalado JDK 21. Se corrigió el toolchain a Java 21, manteniendo el requisito mínimo Java 17+.
 - El segundo `clean build` falló porque `slice2java` rechaza operaciones que solo difieren en mayúsculas del nombre de la interfaz (`eco`/`Eco`). Se renombró la operación del Slice de humo a `repetir`.
+- T-02 falló inicialmente con el contrato normativo: `slice2java` rechazó tres operaciones por colisión de capitalización con sus interfaces y una operación por colisión con un diccionario. `--compat` produjo los mismos errores. Se aplicó el ajuste mínimo de nombres y se registró como D-02.
