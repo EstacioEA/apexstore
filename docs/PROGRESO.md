@@ -21,4 +21,4 @@
 | T-16 Arranque unificado | Completada | edd2aba | 2026-10-06 |
 | T-17 Cliente y escenarios | Parcial | pendiente | 2026-10-06 |
 | T-20 Etiqueta previa | Completada | v0-sin-billetera | 2026-10-06 |
-| T-21 BilleteraSimulada | En progreso | pendiente | 2026-10-06 |
+| T-21 BilleteraSimulada | Completada | abce10d | 2026-10-06 |
