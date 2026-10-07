@@ -14,7 +14,7 @@
 | T-09 transacciones | Completada | 3e0481c | 2026-10-06 |
 | T-10 Checkout | Completada | 13b2a9e | 2026-10-06 |
 | T-11 Resiliencia | Completada | 00216e1 | 2026-10-06 |
-| T-12 Orquestador | Completada | pendiente | 2026-10-06 |
+| T-12 Orquestador | Completada | a2ace37 | 2026-10-06 |
 | T-13 Receptor | Completada | pendiente | 2026-10-06 |
 | T-14 Sweeper | Completada | pendiente | 2026-10-06 |
 | T-15 Admin y servidor | Completada | pendiente | 2026-10-06 |
