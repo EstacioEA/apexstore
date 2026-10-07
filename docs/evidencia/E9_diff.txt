@@ -1,0 +1,19 @@
+ config/backend.properties                          |  3 +-
+ config/pasarelas.properties                        |  7 ++++-
+ docs/PROGRESO.md                                   |  2 ++
+ docs/evidencia/E9_extension.txt                    | 22 +++++++++++++++
+ .../apexstore/pasarelas/BilleteraSimulada.java     | 32 ++++++++++++++++++++++
+ .../apexstore/pasarelas/BilleteraSimuladaTest.java | 25 +++++++++++++++++
+ 6 files changed, 89 insertions(+), 2 deletions(-)
+config/backend.properties
+config/pasarelas.properties
+docs/PROGRESO.md
+docs/evidencia/E9_extension.txt
+src/main/java/co/edu/icesi/apexstore/pasarelas/BilleteraSimulada.java
+src/test/java/co/edu/icesi/apexstore/pasarelas/BilleteraSimuladaTest.java
+config/backend.properties
+config/pasarelas.properties
+docs/PROGRESO.md
+docs/evidencia/E9_extension.txt
+src/main/java/co/edu/icesi/apexstore/pasarelas/BilleteraSimulada.java
+src/test/java/co/edu/icesi/apexstore/pasarelas/BilleteraSimuladaTest.java
