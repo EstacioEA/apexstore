@@ -11,3 +11,10 @@
 | T-06 Base de simulación | Completada | 9a8c6b1 | 2026-10-06 |
 | T-07 Pasarelas concretas | Completada | 8f3fca9 | 2026-10-06 |
 | T-08 Servidor de pasarelas | Completada | 7ca28b9 | 2026-10-06 |
+| T-09 transacciones | Completada | 3e0481c | 2026-10-06 |
+| T-10 Checkout | Completada | pendiente | 2026-10-06 |
+| T-11 Resiliencia | Completada | pendiente | 2026-10-06 |
+| T-12 Orquestador | Completada | pendiente | 2026-10-06 |
+| T-13 Receptor | Completada | pendiente | 2026-10-06 |
+| T-14 Sweeper | Completada | pendiente | 2026-10-06 |
+| T-15 Admin y servidor | Completada | pendiente | 2026-10-06 |
