@@ -9,5 +9,5 @@
 | T-04 Esquema y repositorio JDBC | Completada | f707f40 | 2026-10-06 |
 | T-05 Servant y servidor de BD | Completada | c7c581a | 2026-10-06 |
 | T-06 Base de simulación | Completada | 9a8c6b1 | 2026-10-06 |
-| T-07 Pasarelas concretas | Completada | pendiente | 2026-10-06 |
+| T-07 Pasarelas concretas | Completada | 8f3fca9 | 2026-10-06 |
 | T-08 Servidor de pasarelas | Completada | pendiente | 2026-10-06 |
